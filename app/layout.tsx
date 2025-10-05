@@ -10,7 +10,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "wisehire",
+  title: "WiseHire",
   description: "AI Interviews. Real Market Data. Unstoppable Preparation.",
   icons: {
     icon: '/logo.svg',
