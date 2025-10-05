@@ -11,13 +11,12 @@
 - **📋 GitHub Repository**: [https://github.com/Arjunhg/wemakedevs](https://github.com/Arjunhg/wemakedevs)
 - **🎥 Demo Video**: [3-minute demonstration video](https://youtu.be/WM4pId678_k) 
 
-## 🎯 What wisehire Does
+## 🎯 What WiseHire Does
 
 wisehire revolutionizes interview preparation by:
 
-- **🔍 Real-Time Market Intelligence**: Scrapes current LinkedIn job postings using Bright Data to generate relevant interview questions
-- **🤖 Lifelike AI Interviews**: Conducts realistic practice sessions with Akool's streaming avatar SDK and voice interaction
-- **📝 Adaptive Question Generation**: Creates personalized questions based on uploaded resumes or manual job descriptions
+- **🔍 Real-Time Market Intelligence**: Scrapes current Google Link job postings using Search API to generate relevant interview questions
+- **📝 Adaptive Question Generation**: Creates personalized questions based on uploaded resumes or manual job descriptions via Cerebras Inference
 - **💡 Intelligent Feedback System**: Provides comprehensive performance analysis and improvement suggestions
 - **🔐 Secure User Management**: Implements Clerk authentication with personalized interview history tracking
 
@@ -26,7 +25,7 @@ wisehire revolutionizes interview preparation by:
 ### Technology Stack
 - **Frontend**: Next.js 15 with React 19, TypeScript, Tailwind CSS
 - **Backend**: Next.js API routes with Convex database
-- **AI Integration**: Akool Streaming Avatar SDK for lifelike interviews
+- **AI Integration**: Cerebras AI, Murf AI, AssemblyAI
 - **Authentication**: Clerk for secure user management
 - **File Storage**: ImageKit for PDF resume uploads
 - **Rate Limiting**: Arcjet for API protection and credit management
@@ -36,13 +35,13 @@ Our "unstoppable workflow" leverages n8n's automation capabilities:
 
 ```
 Webhook → Resume Check → Branch Logic:
-├── With Resume: Upload → Extract PDF → Parse with Gemini → Scrape LinkedIn → Generate Questions
-└── Without Resume: Scrape LinkedIn → Clean Data → Generate Questions
+├── With Resume: Upload → Extract PDF → Parse with Cerebras → Scrape Google Links → Generate Questions
+└── Without Resume: Scrape Google Link → Clean Data → Generate Questions
 ```
 
 **Key Components:**
-- **n8n AI Agent Nodes**: OpenAI GPT for question generation + Google Gemini for resume parsing
-- **Bright Data Integration**: Two instances scraping LinkedIn job postings based on job titles
+- **n8n AI Agent Nodes**: Cerebras Llama for question generation + and for resume parsing
+- **Search API Integration**: Two instances scraping Google link job postings based on job titles
 - **Dynamic Processing**: Custom code nodes for HTML cleaning and data optimization
 - **Intelligent Branching**: Different workflow paths based on user input type
 
