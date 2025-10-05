@@ -2,6 +2,8 @@
 
 ![wisehire Landing Page](public/Landing.png)
 
+![n8n Automation via Cerebras](public/n8n.png)
+
 > **🏆 WeMakeDevs Hackathon - Productivity & Workflow Tool**  
 > An AI-powered interview preparation platform built with Cerebras AI, n8n, and Next.js.
 
