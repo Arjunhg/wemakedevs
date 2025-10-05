@@ -51,8 +51,6 @@ export async function POST(request: NextRequest){
                 resumeUrl: uploadResponse.url
             })
 
-            console.log("Full n8n result: ", JSON.stringify(result.data, null, 2));
-            console.log("n8n result interview_questions: ", result.data?.message?.content?.interview_questions);
             
             // Extract interview questions from the response
             let interviewQuestions = [];
@@ -64,7 +62,6 @@ export async function POST(request: NextRequest){
                 interviewQuestions = result.data[0].interview_questions;
             }
             
-            console.log("Extracted interview questions: ", interviewQuestions);
 
             return NextResponse.json({
                 interviewQuestions: interviewQuestions || [],
@@ -78,9 +75,6 @@ export async function POST(request: NextRequest){
                 jobDescription: jobDescription
             })
             
-            console.log("Full n8n result (job description): ", JSON.stringify(result.data, null, 2));
-            console.log("n8n result questions: ", result.data?.message?.content?.questions);
-            
             // Extract interview questions from the response
             let interviewQuestions = [];
             if (result.data?.message?.content?.questions) {
@@ -91,7 +85,6 @@ export async function POST(request: NextRequest){
                 interviewQuestions = result.data[0].questions;
             }
             
-            console.log("Extracted interview questions (job description): ", interviewQuestions);
 
             return NextResponse.json({
                 interviewQuestions: interviewQuestions || [],
