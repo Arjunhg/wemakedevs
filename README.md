@@ -8,7 +8,7 @@
 ## 🚀 Live Demo
 
 - **🌐 Live Application**: [https://wisehire.vercel.app/](https://wisehire.vercel.app/)
-- **📋 GitHub Repository**: [https://github.com/Arjunhg/kiro](https://github.com/Arjunhg/wemakedevs)
+- **📋 GitHub Repository**: [https://github.com/Arjunhg/wemakedevs](https://github.com/Arjunhg/wemakedevs)
 - **🎥 Demo Video**: [3-minute demonstration video](https://youtu.be/WM4pId678_k) 
 
 ## 🎯 What wisehire Does
