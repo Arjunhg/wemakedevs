@@ -2,15 +2,14 @@
 
 ![wisehire Landing Page](public/Landing.png)
 
-> **🏆 Code with Kiro Hackathon - Productivity & Workflow Tools**  
-> An AI-powered interview preparation platform built with Kiro IDE that combines real-time job market intelligence with lifelike AI interviews to streamline developer interview preparation workflows.
+> **🏆 WeMakeDevs Hackathon - Productivity & Workflow Tool**  
+> An AI-powered interview preparation platform built with Cerebras AI, n8n, and Next.js.
 
 ## 🚀 Live Demo
 
 - **🌐 Live Application**: [https://wisehire.vercel.app/](https://wisehire.vercel.app/)
-- **📋 GitHub Repository**: [https://github.com/Arjunhg/kiro](https://github.com/Arjunhg/kiro)
-- **🎥 Demo Video**: [3-minute demonstration video](https://youtube.com/) 
-- **⚙️ n8n Workflow JSON**: [GitHub Gist](https://gist.github.com/Arjunhg/2a62ca089cf4f1b3049c7284d77525ec)
+- **📋 GitHub Repository**: [https://github.com/Arjunhg/kiro](https://github.com/Arjunhg/wemakedevs)
+- **🎥 Demo Video**: [3-minute demonstration video](https://youtu.be/WM4pId678_k) 
 
 ## 🎯 What wisehire Does
 
@@ -59,7 +58,7 @@ Webhook → Resume Check → Branch Logic:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Arjunhg/wisehire.git
+   git clone https://github.com/Arjunhg/wemakedevs.git
    cd wisehire
    ```
 
@@ -107,12 +106,7 @@ Webhook → Resume Check → Branch Logic:
    npx convex dev
    ```
 
-5. **Import n8n workflows**
-   - Import the workflows from our [GitHub Gist](https://gist.github.com/Arjunhg/2a62ca089cf4f1b3049c7284d77525ec)
-   - Configure your Bright Data and OpenAI credentials in n8n
-   - Update webhook URLs in your environment variables
-
-6. **Run the development server**
+5. **Run the development server**
    ```bash
    npm run dev
    ```
@@ -122,15 +116,13 @@ Webhook → Resume Check → Branch Logic:
 ## 🤖 n8n Workflows
 
 ### Enhanced Question Generation Workflow
-- **File**: `BrightData Flow For Interview Generation.json`
 - **Features**: Dual-path processing for resume-based and manual job description flows
-- **AI Nodes**: OpenAI for question generation, Google Gemini for resume parsing
-- **Bright Data**: Scrapes LinkedIn job postings for market-relevant questions
+- **AI Nodes**: Cerebras llama model for question generation and  resume parsing
+- **Scraping**: Scrapes Google links via search API job postings for market-relevant questions
 
 ### Interview Feedback Generator
-- **File**: `Interview Feedback Generator.json`
 - **Features**: Analyzes interview conversations and provides detailed performance feedback
-- **AI Processing**: Uses OpenAI to generate personalized improvement suggestions
+- **AI Processing**: Uses Cerebras llama to generate personalized improvement suggestions
 
 ## 📱 Features
 
