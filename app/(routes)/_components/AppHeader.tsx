@@ -35,7 +35,7 @@ function AppHeader() {
             <nav className="flex w-full items-center justify-between border-t border-b border-border px-4 py-4 bg-background">
                 <Link href={'/'}>
                     <div className="flex items-center gap-2">
-                        <Image src={'/logo.svg'} width={40} height={40} alt="logo"/>
+                        <Image src={'/logo.svg'} width={40} height={40} alt="logo" style={{ width: 'auto', height: 'auto' }}/>
                         <h1 className="text-base font-bold md:text-2xl">HireWize</h1>
                     </div>
                 </Link>

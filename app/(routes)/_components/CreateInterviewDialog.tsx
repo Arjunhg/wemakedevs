@@ -133,6 +133,11 @@ const CreateInterviewDialog = () => {
                 toast.warning(result?.data?.result);
                 return ;
             }
+            
+            console.log("API response: ", result.data);
+            console.log("Interview questions from API: ", result.data?.interviewQuestions);
+            console.log("Interview questions length: ", result.data?.interviewQuestions?.length);
+            
             const response = await saveInterviewQuestion({
                 interviewQuestions: result.data?.interviewQuestions,
                 resumeUrl: result.data?.resumeUrl || undefined,

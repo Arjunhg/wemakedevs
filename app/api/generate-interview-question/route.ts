@@ -51,8 +51,23 @@ export async function POST(request: NextRequest){
                 resumeUrl: uploadResponse.url
             })
 
+            console.log("Full n8n result: ", JSON.stringify(result.data, null, 2));
+            console.log("n8n result interview_questions: ", result.data?.message?.content?.interview_questions);
+            
+            // Extract interview questions from the response
+            let interviewQuestions = [];
+            if (result.data?.message?.content?.interview_questions) {
+                interviewQuestions = result.data.message.content.interview_questions;
+            } else if (result.data?.interview_questions) {
+                interviewQuestions = result.data.interview_questions;
+            } else if (Array.isArray(result.data) && result.data[0]?.interview_questions) {
+                interviewQuestions = result.data[0].interview_questions;
+            }
+            
+            console.log("Extracted interview questions: ", interviewQuestions);
+
             return NextResponse.json({
-                interviewQuestions: result.data?.message?.content?.interview_questions || [],
+                interviewQuestions: interviewQuestions || [],
                 resumeUrl: uploadResponse?.url
             }, { status: 200 })
 
@@ -62,12 +77,24 @@ export async function POST(request: NextRequest){
                 jobTitle: jobTitle,
                 jobDescription: jobDescription
             })
-            // console.log("n8n result: ",result.data?.message?.content?.questions );
-            // console.log("n8n result: ",result.data?.message?.content?.questions || []);
-            // console.log("n8n result :" , result.data);
+            
+            console.log("Full n8n result (job description): ", JSON.stringify(result.data, null, 2));
+            console.log("n8n result questions: ", result.data?.message?.content?.questions);
+            
+            // Extract interview questions from the response
+            let interviewQuestions = [];
+            if (result.data?.message?.content?.questions) {
+                interviewQuestions = result.data.message.content.questions;
+            } else if (result.data?.questions) {
+                interviewQuestions = result.data.questions;
+            } else if (Array.isArray(result.data) && result.data[0]?.questions) {
+                interviewQuestions = result.data[0].questions;
+            }
+            
+            console.log("Extracted interview questions (job description): ", interviewQuestions);
 
             return NextResponse.json({
-                interviewQuestions: result.data?.message?.content?.questions || [],
+                interviewQuestions: interviewQuestions || [],
                 resumeUrl: null
             }, { status: 200 })
         }
