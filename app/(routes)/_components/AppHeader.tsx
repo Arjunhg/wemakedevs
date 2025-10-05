@@ -36,7 +36,7 @@ function AppHeader() {
                 <Link href={'/'}>
                     <div className="flex items-center gap-2">
                         <Image src={'/logo.svg'} width={40} height={40} alt="logo" style={{ width: 'auto', height: 'auto' }}/>
-                        <h1 className="text-base font-bold md:text-2xl">HireWize</h1>
+                        <h1 className="text-base font-bold md:text-2xl">wisehire</h1>
                     </div>
                 </Link>
 
