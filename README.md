@@ -1,4 +1,4 @@
-# wisehire - AI Interviews. Real Market Data. Unstoppable Preparation.
+# WiseHire - AI Interviews. Real Market Data. Unstoppable Preparation.
 
 ![wisehire Landing Page](public/Landing.png)
 
@@ -78,10 +78,8 @@ Webhook → Resume Check → Branch Logic:
    # n8n Webhook URLs
    N8N_URL_ENDPOINT=your_n8n_webhook_url
    
-   # Akool API
-   AKOOL_API_TOKEN=your_akool_token
-   AKOOL_CLIENT_ID=your_akool_client_id
-   AKOOL_SEC_ID=your_akool_secret_id
+   MURF_API_KEY=your_murf_api_key
+   ASSEMBLYAI_API_KEY=your_assemblyai_api_key
    
    # ImageKit
    IMAGEKIT_URL_PUBLIC_KEY=your_imagekit_public_key
@@ -156,39 +154,8 @@ Webhook → Resume Check → Branch Logic:
 - `POST /api/interview-feedback` - Processes interview conversation for feedback
 - `POST /api/akool-session` - Manages AI avatar session creation
 - `POST /api/akool-knowledge-base` - Handles knowledge base operations
-
-## 🤖 How Kiro IDE Was Used
-
-### Spec-Driven Development with Kiro
-Kiro's spec-driven approach was instrumental in architecting wisehire's complex workflow system:
-
-- **📋 Specification Creation**: Used Kiro's natural conversation interface to define detailed specs for the AI interview system, including user flows, API integrations, and component architecture
-- **🔄 Iterative Development**: Leveraged Kiro's understanding of project context to refine specifications and generate production-ready code that aligned with our vision
-- **🏗️ Architecture Decisions**: Kiro helped structure the multi-service architecture (Next.js + Convex + n8n + Akool) with proper separation of concerns
-
-### AI-Assisted Code Generation
-- **⚡ Component Development**: Generated React components with TypeScript interfaces, including the complex interview interface and dashboard layouts
-- **🔌 API Integration**: Kiro assisted in creating robust API routes for Akool SDK integration, Convex database operations, and n8n workflow triggers
-- **🎨 UI/UX Implementation**: Collaborated with Kiro to implement responsive design patterns and accessibility features using Tailwind CSS
-
-### Workflow Automation & Agent Hooks
-- **🔗 n8n Integration**: Used Kiro to design and implement the webhook-based communication between Next.js and n8n workflows
-- **📊 Data Processing**: Kiro helped create efficient data transformation logic for processing LinkedIn job data and resume parsing
-- **🛡️ Error Handling**: Implemented comprehensive error handling and rate limiting with Kiro's guidance on best practices
-
-### Development Process Enhancement
-- **💡 Problem-Solving**: Kiro's multi-modal chat helped brainstorm solutions for complex integration challenges
-- **📚 Documentation**: Assisted in creating comprehensive documentation and code comments for maintainability
-- **🧪 Testing Strategy**: Guided implementation of error boundaries and validation logic
-
-## 🏆 Code with Kiro Hackathon Compliance
-
-✅ **Category**: Productivity & Workflow Tools, Education - Streamlines interview preparation for developers  
-✅ **Kiro Usage**: Extensive use of spec-driven development, AI code generation, and architectural guidance  
-✅ **/.kiro Directory**: Present in repository root showcasing specs, hooks, and steering configurations  
-✅ **Public Repository**: Open source with MIT license  
-✅ **Live Demo**: Available at [wisehire.vercel.app](https://wisehire.vercel.app/)  
-✅ **Video Demo**: 3-minute demonstration video showcasing Kiro development process [YouTube](https://youtu.be/nWJVKGOHJLY)  
+- `POST /api/murf-tts` - Generates speech using Murf AI
+- `POST /api/assemblyai-stream` - Transcribes audio using AssemblyAI
 
 ## 🚀 Deployment
 
@@ -216,10 +183,8 @@ This project is deployed on Vercel. To deploy your own instance:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
-- **kiro** for continuous development and automation support
+- **Cerebras** for providing the AI infrastructure
 - **n8n** for providing the automation platform and AI Agent nodes
-- **Bright Data** for reliable web scraping infrastructure
-- **Akool** for lifelike AI avatar technology
+- **murf** for voice synthesis
 - **Vercel** for seamless deployment and hosting
-
 ---
